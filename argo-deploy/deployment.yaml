@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javaArgoHelm
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: javaArgoHelm
+  template:
+    metadata:
+      labels:
+        app: javaArgoHelm
+    spec:
+      containers:
+      - image: marketplace.gcr.io/google/nginx1
+        name: javaArgoHelm
+        ports:
+        - containerPort: 80
