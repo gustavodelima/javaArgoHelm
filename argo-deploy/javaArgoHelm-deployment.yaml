@@ -14,7 +14,7 @@ spec:
         app: javaargohelm
     spec:
       containers:
-      - image: marketplace.gcr.io/google/nginx1
+      - image: nginx
         name: javaargohelm
         ports:
         - containerPort: 80
